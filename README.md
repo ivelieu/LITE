@@ -11,6 +11,7 @@ This information is live [here](https://ivelieu.github.io/LITE/).
 
 Where C is the ciphertext, M is the plaintext message  
 b is the base exponent, p is the primitive exponent  
+Ideally, b and p are coprime, but I do not believe this is required.
 g is the generator slice = b^^p  
 t<sub>l</sub> and t<sub>h</sub> are the truncations of the message encryption computation (which are determined by the receiver, who generates the private keys. The truncation of the requested message is different to the truncation of g. The truncation of g is only known by the receiver, similarly to the private keys b and p.)  
 Private keys: [b, p]  
