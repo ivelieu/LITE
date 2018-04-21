@@ -12,11 +12,13 @@ other names: public slice, public fraction?
 
 Public key 2: "I want you to truncate your result to this.". eg. digit 50 to 60.  
 Let us call public key to tl and th: tl is the lower bound of truncation, th is the higher bound.  
-There is a minimum required truncation definition! The lower bound is defined by the length of the private key's tetration operation. ie. Since 2^^4 has less than 60 digits, our example in practice would require larger private keys. ie. I do not believe cyling the non-truncated private key would be satsifactory.  
+There is a minimum required truncation definition!  
+
+The lower bound is defined by the length of the private key's tetration operation. ie. Since 2^^4 has less than 60 digits, our example in practice would require larger private keys. ie. I do not believe cyling the non-truncated private key would be satsifactory.  
 
 The upper bound is only defined by the geometry of the universe. So, one can utilise 100% of a channel to transmit a message of unknown length or values. This truly reveals no information about either the encrypted text or the private keys.  
 
-Private keys: 2 and 4 
+Private keys: 2 and 4  
 ie. 2 is the base and 4 is the primitive exponent  
 (it gets more complex as the result is calculated. 2^^4 = 2^2^2^2 = 2 * 2 ...)  
 Let us call the private keys b and p.  
@@ -24,8 +26,8 @@ The private key in total is the result b^^p. For this private calculated key (b^
 I'm bob, I did that, I send 553 as public key to Alice  
 Alice exponents their message by 553.  
 The message is 42, obviously.  
-42 = (42^553) rooted to the exponent of (42^553)  
-= 4.53 * 10^897 --- almost a googleplex!  
+`42 = (42^553)` rooted to the exponent of `(42^553) `  
+`= 4.53 * 10^897` --- almost a googleplex!  
 They send a subset to me, over an untrusted channel. I tell them which subset I want.   
 (both public keys are sent simeltaneously)  
 They don't know the subset of public key 1.  
@@ -36,13 +38,14 @@ I get the result. I perform (the message) rooted to the exponent of (2^^4 trunca
 
 ## A bit about truncation on both ends of a number:
 until now, truncation has only needed to be in one direction. ie. "round to 2 decimal places" is truncating the lower bound. "up to 6 significant figures" is also the lower bound. Truncation to the upper bound has no universal mathmatical function.  
-Let there be a function trunc_up that accepts one number for the value to be truncated, and another value for the upper truncation bound. The function trunc_up(x,n) returns the first n travelling along x from the reverse big endian path, ignoring zeroes on the end.  
+Let there be a function `trunc_up` that accepts one number for the value to be truncated, and another value for the upper truncation bound. The function `trunc_up(x,n)` returns the first n travelling along x from the reverse big endian path, ignoring zeroes on the end.  
 
-Let there be a function trunc_both that accepts one number for the value to be truncated, another value for the lower truncation bound, and another value for the upper truncation bound. This function trunc_both(x,tl,th) will perform the following psuedocode:  
+Let there be a function `trunc_both` that accepts one number for the value to be truncated, another value for the lower truncation bound, and another value for the upper truncation bound. This function `trunc_both(x,tl,th)` will perform the following psuedocode:  
+```
 x1 = trunc(x,tl);  
 x2 = trunc_up(x1, th);  
 return x2;  
-
+```
 big endian is the standard of decimal notation.  
 
 
