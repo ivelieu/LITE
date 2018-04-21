@@ -1,7 +1,6 @@
 # LITE
 Limited Information Tetration Encryption  
-Made with Darcy (@Ivelieu) and Ben (@puzzleduck) at the Internet Freedom Hack  
-https://digitalrightswatch.org.au/2018/03/22/internet-freedom-hack-defending-truth/  
+Made with Darcy ([@Ivelieu](https://github.com/ivelieu/)) and Ben ([@PuZZleDucK](https://github.com/PuZZleDucK)) at the [Internet Freedom Hack from 20/04/2018 to 22/04/2018](https://digitalrightswatch.org.au/2018/03/22/internet-freedom-hack-defending-truth/).  
 Darcy: I made the C file using JetBrains CLion.  
 
 This information is live [here](https://ivelieu.github.io/LITE/).
@@ -40,7 +39,7 @@ I get the result. I perform (the message) rooted to the exponent of (2^^4 trunca
 
 ### Formula
 
-![thing](./equation.gif)
+![uhoh](./equation.gif)
 
 ## A bit about truncation on both ends of a number:
 until now, truncation has only needed to be in one direction. ie. "round to 2 decimal places" is truncating the lower bound. "up to 6 significant figures" is also the lower bound. Truncation to the upper bound has no universal mathmatical function.  
