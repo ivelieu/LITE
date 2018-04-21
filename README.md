@@ -4,6 +4,8 @@ Made with Darcy (@Ivelieu) and Ben (@puzzleduck) at the Internet Freedom Hack
 https://digitalrightswatch.org.au/2018/03/22/internet-freedom-hack-defending-truth/  
 Darcy: I made the C file using JetBrains CLion.  
 
+This information is live [here](https://ivelieu.github.io/LITE/).
+
 # Transmission process
 
 Public key 1: 553 truncated from 65536  
@@ -35,6 +37,10 @@ I get the result. I perform (the message) rooted to the exponent of (2^^4 trunca
 
 
 #### The quantum computer spits out 42. 
+
+### Formula
+
+![thing](./equation.gif)
 
 ## A bit about truncation on both ends of a number:
 until now, truncation has only needed to be in one direction. ie. "round to 2 decimal places" is truncating the lower bound. "up to 6 significant figures" is also the lower bound. Truncation to the upper bound has no universal mathmatical function.  
