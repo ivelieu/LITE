@@ -1,6 +1,6 @@
 # LITE
 Limited Information Tetration Encryption  
-Made with Darcy and Ben
+Made with Darcy (@Ivelieu) and Ben (@puzzleduck)
 
 # Transmission process
 
