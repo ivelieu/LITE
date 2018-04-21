@@ -3,7 +3,9 @@ Limited Information Tetration Encryption
 Made with Darcy ([@Ivelieu](https://github.com/ivelieu/)) and Ben ([@PuZZleDucK](https://github.com/PuZZleDucK)) at the [Internet Freedom Hack from 20/04/2018 to 22/04/2018](https://digitalrightswatch.org.au/2018/03/22/internet-freedom-hack-defending-truth/).  
 Darcy: I made the C file using JetBrains CLion.  
 
-This information is live [here](https://ivelieu.github.io/LITE/).
+This information is live [here](https://ivelieu.github.io/LITE/).  
+
+There is a more simple explanation of the concepts [here](https://github.com/ivelieu/LITE/blob/master/Presentation.pdf).  
 
 ## The General Formula
 
