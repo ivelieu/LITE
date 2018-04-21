@@ -12,7 +12,7 @@ This information is live [here](https://ivelieu.github.io/LITE/).
 Where C is the ciphertext, M is the plaintext message  
 b is the base exponent, p is the primitive exponent  
 g is the generator slice = b^^p  
-t<sub>l</sub> and t<sub>h</sub> are the truncations of the message encryption computation (which are determined by the reciever, who generates the private keys. The truncation of the requested message is different to the truncation of g. The truncation of g is only known by the reciever, similarly to the private keys b and p.)  
+t<sub>l</sub> and t<sub>h</sub> are the truncations of the message encryption computation (which are determined by the receiver, who generates the private keys. The truncation of the requested message is different to the truncation of g. The truncation of g is only known by the receiver, similarly to the private keys b and p.)  
 Private keys: [b, p]  
 Public keys: [g, t<sub>l</sub>, t<sub>h</sub>]
 
@@ -27,7 +27,7 @@ ie. trunc_both(65536, 2, 4) returns 553.
 Let us call public key to t<sub>l</sub> and t<sub>h</sub>: t<sub>l</sub> is the lower bound of truncation, t<sub>h</sub> is the higher bound.  
 There is a minimum required truncation definition!  
 
-The lower bound is defined by the length of the private key's tetration operation. ie. Since 2^^4 has less than 60 digits, our example in practice would require larger private keys. ie. I do not believe cyling the non-truncated private key would be satsifactory.  
+The lower bound is defined by the length of the private key's tetration operation. ie. Since 2^^4 has less than 60 digits, our example in practice would require larger private keys. ie. I do not believe cycling the non-truncated private key would be satisfactory.  
 
 The upper bound is only defined by the geometry of the universe. So, one can utilise 100% of a channel to transmit a message of unknown length or values. This truly reveals no information about either the encrypted text or the private keys. Hooray for perfect forward secrecy!  
 
@@ -41,9 +41,9 @@ I'm bob, I did that, I send 553 as public key to Alice
 Alice exponents their message by 553.  
 The message is 42, obviously.  
 `42 = (42^553)` rooted to the exponent of `(42^553) `  
-`= 4.53 * 10^897` --- almost a googleplex!  
+`= 4.53 * 10^897` -- almost a googleplex!  
 They send a subset to me, over an untrusted channel. I tell them which subset I want.   
-(both public keys are sent simeltaneously)  
+(both public keys are sent simultaneously)  
 They don't know the subset of public key 1.  
 I get the result. I perform (the message) rooted to the exponent of (2^^4 truncated to public key 2) inside my quantum computer.  
 
@@ -51,9 +51,9 @@ I get the result. I perform (the message) rooted to the exponent of (2^^4 trunca
 #### The quantum computer spits out 42. 
 I'll admit, I am not up to sketch on writing Q# to do this.  
 This is a todo for me if this project furthers development.
-## About truncation on both ends of a number:
-until now, truncation has only needed to be in one direction. ie. "round to 2 decimal places" is truncating the lower bound. "up to 6 significant figures" is also the lower bound. Truncation to the upper bound has no universal mathmatical function.  
-Let there be a function `trunc_up` that accepts one number for the value to be truncated, and another value for the upper truncation bound. The function `trunc_up(x,n)` returns the first n travelling along x from the reverse big endian path, ignoring zeroes on the end.  
+## About truncation on both ends of a number
+Until now, truncation has only needed to be in one direction. ie. "round to 2 decimal places" is truncating the lower bound. "up to 6 significant figures" is also the lower bound. Truncation to the upper bound has no universal mathematical function.  
+Let there be a function `trunc_up` that accepts one number for the value to be truncated, and another value for the upper truncation bound. The function `trunc_up(x,n)` returns the first n traveling along x from the reverse big endian path, ignoring zeroes on the end.  
 
 Let there be a function `trunc_both` that accepts one number for the value to be truncated, another value for the lower truncation bound, and another value for the upper truncation bound. This function `trunc_both(x,tl,th)` will perform the following psuedocode:  
 ```
@@ -61,7 +61,7 @@ x1 = trunc(x,tl);
 x2 = trunc_up(x1, th);  
 return x2;  
 ```
-big endian is the standard of decimal notation.  
+Reminder: big endian is the standard of decimal notation.  
 
 
 ## About the Limited Information Problem (LIP)
