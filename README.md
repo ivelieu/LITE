@@ -1,6 +1,7 @@
 # LITE
 Limited Information Tetration Encryption  
-Made with Darcy (@Ivelieu) and Ben (@puzzleduck)
+Made with Darcy (@Ivelieu) and Ben (@puzzleduck) at the Internet Freedom Hack  
+Darcy: I made the C file using JetBrains CLion.  
 
 # Transmission process
 
@@ -32,7 +33,6 @@ ie.
 
 #### The quantum computer spits out 42. 
 
-
 ### A bit about truncation on both ends of a number:
 until now, truncation has only needed to be in one direction. ie. "round to 2 decimal places" is truncating the lower bound. "up to 6 significant figures" is also the lower bound. Truncation to the upper bound has no universal mathmatical function. 
 Let there be a function trunc_up that accepts one number for the value to be truncated, and another value for the upper truncation bound. The function trunc_up(x,n) returns the first n travelling along x from the reverse big endian path, ignoring zeroes on the end. 
@@ -55,12 +55,9 @@ Using this principle, we can design simple, recursive operations that produce ou
 If a subset of the output greater than AITOU is sufficiently complex to identify itself, but sufficiently small to "be observable inside" the AITOU, it is possible to verify the output subset as a true subset of the output without being able to "recreate" the output using the output subset. The Limited Information Problem is the principle of the latter: given only the sufficiently large subset of a computation greater than AITOU, the original computation cannot be determined.
 
 
-
 ### Potential issues  
 targetted quantum entanglement and tunelling
 Probably requires more energy than contained in the universe ...
-
-
 
 
 ### Seperate topic: DTube
