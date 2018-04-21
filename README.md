@@ -1,6 +1,7 @@
 # LITE
 Limited Information Tetration Encryption  
 Made with Darcy (@Ivelieu) and Ben (@puzzleduck) at the Internet Freedom Hack  
+https://digitalrightswatch.org.au/2018/03/22/internet-freedom-hack-defending-truth/  
 Darcy: I made the C file using JetBrains CLion.  
 
 # Transmission process
